@@ -1,0 +1,11 @@
+Package: ag.dev.sv
+Maintainer: <datashield@obiba.org>
+Author: <datashield@obiba.org>
+Version: 1.0
+License: GPL-3
+Title: ag.dev.sv
+Description: ag.dev.sv (server)
+AggregateMethods: length=base::length, matrix=base::matrix,
+AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
+
+
