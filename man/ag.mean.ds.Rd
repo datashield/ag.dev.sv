@@ -15,6 +15,6 @@
   entries
 }
 \author{
-  A. Gaye
+  Gaye A.
 }
 
