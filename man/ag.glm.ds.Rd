@@ -5,13 +5,13 @@
   ag.glm.ds(formula, family, beta.vect = NULL)
 }
 \arguments{
-  \item{\code{formula}}{an object of class \code{formula}}
+  \item{formula}{an object of class \code{formula}}
 
-  \item{\code{family}}{a description of the error
-  distribution and link function to used in the model}
+  \item{family}{a description of the error distribution and
+  link function to used in the model}
 
-  \item{\code{beta.vect}}{starting values for the
-  parameters in the linear predictor}
+  \item{beta.vect}{starting values for the parameters in
+  the linear predictor}
 }
 \value{
   a list which contains: the fitted \code{family}, a score

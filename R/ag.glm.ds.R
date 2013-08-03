@@ -2,10 +2,10 @@
 #'
 #' @title Fits a generalized linear model
 #'
-#' @param \code{formula} an object of class \code{formula}
-#' @param \code{family} a description of the error distribution and link function to
+#' @param formula an object of class \code{formula}
+#' @param family a description of the error distribution and link function to
 #' used in the model
-#' @param \code{beta.vect} starting values for the parameters in the linear predictor
+#' @param beta.vect starting values for the parameters in the linear predictor
 #' @return a list which contains: the fitted \code{family}, a score vector and an information matrix
 #' @export
 ag.glm.ds <- function (formula, family, beta.vect=NULL) {

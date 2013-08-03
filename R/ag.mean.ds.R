@@ -1,7 +1,7 @@
 #' Computes the mean statistic for vectors with more than 4 entries
 #'
 #' @title Calculates a statistical mean
-#' @param \code{a} a numerical vector
+#' @param a a numerical vector
 #' @return a numeric 
 #' @author Gaye A.
 #' @export

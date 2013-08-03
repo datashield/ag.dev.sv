@@ -5,7 +5,7 @@
   ag.mean.ds(a)
 }
 \arguments{
-  \item{\code{a}}{a numerical vector}
+  \item{a}{a numerical vector}
 }
 \value{
   a numeric
