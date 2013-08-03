@@ -1,5 +1,6 @@
 export(ag.contour.plot.ds)
 export(ag.create.factor.ds)
+export(ag.glm.ds)
 export(ag.histogram.ds)
 export(ag.mean.ds)
 export(ag.odds.ratio.ds)

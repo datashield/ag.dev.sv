@@ -7,7 +7,7 @@
 #' used in the model
 #' @param \code{beta.vect} starting values for the parameters in the linear predictor
 #' @return a list which contains: the fitted \code{family}, a score vector and an information matrix
-#'
+#' @export
 ag.glm.ds <- function (formula, family, beta.vect=NULL) {
 
   mod.glm.ds <- glm(formula, family=family, x=TRUE, control=glm.control(maxit=1), constrast=NULL)

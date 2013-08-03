@@ -6,13 +6,11 @@ License: GPL-3
 Title: ag.dev.sv
 Description: ag.dev.sv (server)
 AggregateMethods: length=base::length, colnames=base::colnames, ag.glm.ds
-    ag.asname.ds
 AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     as.numeric=base::as.numeric, as.matrix=base::as.matrix,
     complete.cases=stats::complete.cases, cbind=base::cbind,
     data.frame=base::data.frame, as.list=base::as.list
 Collate:
-    'ag.asname.ds.R'
     'ag.contour.plot.ds.R'
     'ag.create.factor.ds.R'
     'ag.glm.ds.R'
