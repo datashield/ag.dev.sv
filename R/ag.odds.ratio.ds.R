@@ -4,7 +4,7 @@
 #' @param yvect a factor vector
 #' @param alpha level of statistical significance
 #' @export
-#' @author Isaeva J.
+#' @author Isaeva, J.
 #'
 ag.odds.ratio.ds <- function (xvect, yvect, alpha=0.05) {
   

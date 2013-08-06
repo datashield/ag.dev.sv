@@ -13,6 +13,6 @@
   plotting.
 }
 \author{
-  Gaye A.
+  Gaye, A.
 }
 

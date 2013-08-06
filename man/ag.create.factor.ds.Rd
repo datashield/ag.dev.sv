@@ -37,6 +37,6 @@
   Generates a factor variable
 }
 \author{
-  Burton P.
+  Burton, P.
 }
 

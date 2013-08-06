@@ -20,4 +20,7 @@
 \description{
   Generalized linear modellling
 }
+\author{
+  Burton, P.; Laflamme, P.; Gaye, A.
+}
 

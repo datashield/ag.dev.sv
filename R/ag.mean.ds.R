@@ -3,7 +3,7 @@
 #' @title Calculates a statistical mean
 #' @param a a numerical vector
 #' @return a numeric 
-#' @author Gaye A.
+#' @author Gaye, A.
 #' @export
 #' 
 

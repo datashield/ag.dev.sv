@@ -7,6 +7,7 @@
 #' used in the model
 #' @param beta.vect starting values for the parameters in the linear predictor
 #' @return a list which contains: the fitted \code{family}, a score vector and an information matrix
+#' @author Burton, P.; Laflamme, P.; Gaye, A.
 #' @export
 #' 
 ag.glm.ds <- function (formula, family, beta.vect=NULL) {

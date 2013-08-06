@@ -16,6 +16,6 @@
   interval
 }
 \author{
-  Isaeva J.
+  Isaeva, J.
 }
 

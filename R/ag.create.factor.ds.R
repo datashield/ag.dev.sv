@@ -12,7 +12,7 @@
 #' @param labels labels for the different levels
 #' @param exclude values to be excluded
 #' @param ordered tells if the variable 'x' is ordered
-#' @author Burton P.
+#' @author Burton, P.
 #' @export
 #' 
 

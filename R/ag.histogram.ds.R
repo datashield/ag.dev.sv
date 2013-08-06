@@ -2,7 +2,7 @@
 #'
 #' @param a a vector of values for which the histogram is desired.
 #' @export
-#' @author Gaye A.
+#' @author Gaye, A.
 #' 
 ag.histogram.ds <- function (a) {
   hist(a,plot=FALSE)

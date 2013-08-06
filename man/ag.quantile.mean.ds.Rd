@@ -12,6 +12,6 @@
   and minimum
 }
 \author{
-  Burton P.
+  Burton, P.
 }
 
