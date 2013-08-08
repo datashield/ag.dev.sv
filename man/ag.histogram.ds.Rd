@@ -26,8 +26,8 @@ data(logindata)
 
 opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 
-# use the function to genrate the histogram object
-datashield.aggregate(opals, quote(ag.histogram.ds(D$LB_TSC)))
+# use the function to generate the histogram object
+datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
 }
 }
 \author{

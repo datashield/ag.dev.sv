@@ -30,18 +30,13 @@ ag.histogram.ds <- function (a) {
   # check if any of the 'bins' contains a count < 5
   ch <- length(which(histout$count < 5))
   
-  # keep a tag to indicate if some count were < 5
-  smallcount <- 0
-  
   # if any 'bin' contains a count < 5 use larger bins (i.e. less bins)
   # this process continues until all counts > 5
   if(ch > 0){
-    smallcount <- 1
+    # get the vector of break points and its length
+    brkpts <- histout$breaks
+    l.brkpts <- length(brkpts)
     while(ch > 0){
-      # get the vector of break points and its length
-      brkpts <- histout$breaks
-      l.brkpts <- length(brkpts)
-      
       # combine the break points at the tails of the histogram
       new.brkpts <- brkpts[-c(2,(l.brkpts-1))]
       
@@ -52,5 +47,5 @@ ag.histogram.ds <- function (a) {
       ch <- length(which(histout$count < 5))
     }
   }
-  return(list("hist.object"=histout,"contains.small.count"=smallcount))
+  return(histout)
 }
