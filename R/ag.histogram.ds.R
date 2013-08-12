@@ -30,13 +30,9 @@ ag.histogram.ds <- function (numvect) {
   # check if any of the 'bins' contains a count < 5
   ch <- length(which(histout$count < 5))
   
-  # keep a tag to indicate if some count were < 5
-  smallcount <- 0
-  
   # if any 'bin' contains a count < 5 use larger bins (i.e. less bins)
   # this process continues until all counts > 5
   if(ch > 0){
-    smallcount <- 1
     while(ch > 0){
       # get the vector of break points and its length
       brkpts <- histout$breaks
@@ -65,11 +61,5 @@ ag.histogram.ds <- function (numvect) {
     }
   }
 
-  # fix the the break width so that the combine hitogram has 
-  # the same break points across the studies
-  min.b <- min(histout$breaks)
-  max.b <- max(histout$breaks)
-  histout <- hist(numvect,plot=FALSE, breaks=seq(min.b, max.b, by=0.25))
-    
-  return(list("hist.object"=histout,"contains.small.count"=smallcount))
+  return(histout)
 }
