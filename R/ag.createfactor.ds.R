@@ -16,7 +16,7 @@
 #' @export
 #' 
 
-ag.create.factor.ds <- function (x = character(), maxval=NA, minval=NA,
+ag.createfactor.ds <- function (x = character(), maxval=NA, minval=NA,
           Xval1=NA, Xval2=NA, Xval3=NA, Xval4=NA, Xval5=NA,
           levels, labels = levels, exclude = NA, 
           ordered = is.ordered(x)) 

@@ -4,7 +4,7 @@
 #' a histogram. This is done without allowing for bins (cells) with a
 #' count of less than 5. If a bin has a count < 5 it is collapsed with 
 #' the nearing bin; this process iterates until all bins have count >=5.
-#' @param a numeric vector for which the histogram is desired.
+#' @param numvect numeric vector for which the histogram is desired.
 #' @return an object of class \code{histogram}
 #' @export
 #' @author Gaye, A.
@@ -22,10 +22,10 @@
 #' datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
 #' }
 #' 
-ag.histogram.ds <- function (a) {
+ag.histogram.ds <- function (numvect) {
   
   # get the histogram object
-  histout <- hist(a,plot=FALSE)
+  histout <- hist(numvect,plot=FALSE)
   
   # check if any of the 'bins' contains a count < 5
   ch <- length(which(histout$count < 5))
@@ -42,15 +42,34 @@ ag.histogram.ds <- function (a) {
       brkpts <- histout$breaks
       l.brkpts <- length(brkpts)
       
-      # combine the break points at the tails of the histogram
-      new.brkpts <- brkpts[-c(2,(l.brkpts-1))]
+      # indices of the bins with counts < 5
+      indx <- which(histout$count < 5)
+      
+      # combine the break points where count < 5 with the nearest break point
+      # if the small count is on the left tail of the histogram the nearest is 
+      # on the right and on the left if the small count is on the right tail
+      # by 'combine' I mean just removing the nearest break hence merging two bins.
+      midpoint <- l.brkpts/2
+      if(indx[1] < midpoint){
+        new.brkpts <- brkpts[-(indx[1]+1)]
+      }
+      if(indx[1] > midpoint){
+        new.brkpts <- brkpts[-(indx[1])]
+      }      
       
       # use the new vector of break points
-      histout <- hist(a,plot=FALSE, breaks=new.brkpts)
+      histout <- hist(numvect,plot=FALSE, breaks=new.brkpts)
       
       # check the counts in the bins
       ch <- length(which(histout$count < 5))
     }
   }
+
+  # fix the the break width so that the combine hitogram has 
+  # the same break points across the studies
+  min.b <- min(histout$breaks)
+  max.b <- max(histout$breaks)
+  histout <- hist(numvect,plot=FALSE, breaks=seq(min.b, max.b, by=0.25))
+    
   return(list("hist.object"=histout,"contains.small.count"=smallcount))
 }

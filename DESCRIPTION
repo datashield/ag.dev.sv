@@ -12,10 +12,10 @@ AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     complete.cases=stats::complete.cases, cbind=base::cbind,
     data.frame=base::data.frame, as.list=base::as.list
 Collate:
-    'ag.contour.plot.ds.R'
-    'ag.create.factor.ds.R'
     'ag.glm.ds.R'
     'ag.histogram.ds.R'
     'ag.mean.ds.R'
-    'ag.odds.ratio.ds.R'
-    'ag.quantile.mean.ds.R'
+    'ag.contourplot.ds.R'
+    'ag.createfactor.ds.R'
+    'ag.oddsratio.ds.R'
+    'ag.quantilemean.ds.R'

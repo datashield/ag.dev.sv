@@ -1,8 +1,8 @@
-\name{ag.odds.ratio.ds}
-\alias{ag.odds.ratio.ds}
+\name{ag.oddsratio.ds}
+\alias{ag.oddsratio.ds}
 \title{Calculates odds ratio and its 95 percent confidence interval}
 \usage{
-  ag.odds.ratio.ds(xvect, yvect, alpha = 0.05)
+  ag.oddsratio.ds(xvect, yvect, alpha = 0.05)
 }
 \arguments{
   \item{xvect}{a factor vector}

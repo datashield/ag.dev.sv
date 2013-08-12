@@ -1,8 +1,8 @@
-\name{ag.create.factor.ds}
-\alias{ag.create.factor.ds}
+\name{ag.createfactor.ds}
+\alias{ag.createfactor.ds}
 \title{Generates a factor variable}
 \usage{
-  ag.create.factor.ds(x = character(), maxval = NA,
+  ag.createfactor.ds(x = character(), maxval = NA,
     minval = NA, Xval1 = NA, Xval2 = NA, Xval3 = NA,
     Xval4 = NA, Xval5 = NA, levels, labels = levels,
     exclude = NA, ordered = is.ordered(x))

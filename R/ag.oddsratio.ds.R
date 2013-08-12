@@ -6,7 +6,7 @@
 #' @export
 #' @author Isaeva, J.
 #'
-ag.odds.ratio.ds <- function (xvect, yvect, alpha=0.05) {
+ag.oddsratio.ds <- function (xvect, yvect, alpha=0.05) {
   
   ####
   # Calculates odds ratio and its 95% confidence interval

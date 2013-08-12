@@ -6,7 +6,7 @@
 #' @author Burton, P.
 #' @export
 #' 
-ag.contour.plot.ds <- function(xvect,yvect)
+ag.contourplot.ds <- function(xvect,yvect)
 {
   xvect.save<-xvect
   yvect.save<-yvect

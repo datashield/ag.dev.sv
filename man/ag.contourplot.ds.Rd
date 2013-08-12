@@ -1,8 +1,8 @@
-\name{ag.contour.plot.ds}
-\alias{ag.contour.plot.ds}
+\name{ag.contourplot.ds}
+\alias{ag.contourplot.ds}
 \title{Computes a grid-density object required to generate a contour plot.}
 \usage{
-  ag.contour.plot.ds(xvect, yvect)
+  ag.contourplot.ds(xvect, yvect)
 }
 \arguments{
   \item{xvect}{a numerical vector}

@@ -1,8 +1,8 @@
-\name{ag.quantile.mean.ds}
-\alias{ag.quantile.mean.ds}
+\name{ag.quantilemean.ds}
+\alias{ag.quantilemean.ds}
 \title{Provides quantiles and mean information without maximum and minimum}
 \usage{
-  ag.quantile.mean.ds(a)
+  ag.quantilemean.ds(a)
 }
 \arguments{
   \item{a}{a numerical vector}
