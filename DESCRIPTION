@@ -19,4 +19,3 @@ Collate:
     'ag.createfactor.ds.R'
     'ag.oddsratio.ds.R'
     'ag.quantilemean.ds.R'
-    'ag.checkvar1.ds.R'
