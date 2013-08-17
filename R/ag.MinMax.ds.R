@@ -10,7 +10,7 @@
 ag.MinMax.ds <- function(xvect, yvect) {
   
   MinMaxMatrix <- data.frame(cbind(c(0,0),c(0,0)))
-  colnames(MinMaxMatrix) <- c(as.character(quote(xvect)), as.character(quote(yvect)))
+  colnames(MinMaxMatrix) <- c("xvect", "yvect")
   rownames(MinMaxMatrix) <- c("min", "max")
   
   MinMaxMatrix[1, 1] <- min(xvect, na.rm=T)

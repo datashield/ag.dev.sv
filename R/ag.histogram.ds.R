@@ -19,7 +19,7 @@
 #' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 #' 
 #' # use the function to generate the histogram object
-#' datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
+#' his.object <- datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
 #' }
 #' 
 ag.histogram.ds <- function (numvect) {
