@@ -1,6 +1,7 @@
 export(ag.contourplot.ds)
 export(ag.createfactor.ds)
 export(ag.glm.ds)
+export(ag.griddensitylim.ds)
 export(ag.histogram.ds)
 export(ag.mean.ds)
 export(ag.MinMax.ds)
