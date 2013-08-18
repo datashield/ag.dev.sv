@@ -3,7 +3,7 @@
 #' @description this functions checks if the variables are present in the dataset assigned 
 #' to R from an opal datasource and if the variables are empty (contain NAs only).
 #' This function is internal (not available to users) as it is only required by \code{ds.glm}.
-#' @param data a \code{dataframe} that contains the data assigned to R
+#' @param dataset a \code{dataframe} that contains the data assigned to R
 #' @param servername name of the login object the data were assigned to
 #' @param variables the variables to check
 #' @return '0' if the variable did not fail any of the checks and '1' if the variable failed
@@ -11,7 +11,7 @@
 #' @author Gaye, A.
 #' @export
 #' 
-ag.ds.checkvar1 <- function(data, servername, variables){
+ag.ds.checkvar1 <- function(dataset, servername, variables){
   
   # lists to hold the results of the checks for all the datasets/studies
   misngvar1 <- c()
@@ -21,7 +21,7 @@ ag.ds.checkvar1 <- function(data, servername, variables){
   toremove <- 0
   
   # get names of the variables that have been assigned to R
-  var.names <- colnames(data)
+  var.names <- colnames(dataset)
   
   # declare two vectors which hold the results of the two checks that are conducted
   # tagtemp1 tells if a variable is not present in a datasets/study/server
@@ -41,8 +41,8 @@ ag.ds.checkvar1 <- function(data, servername, variables){
     }else{
       # check how if variable contains only missings, if yes record
       col2check <- which(var.names == variables[j])
-      lmiss <- length(which(is.na(data[,col2check])))
-      lvar  <- length(data[,col2check])  
+      lmiss <- length(which(is.na(dataset[,col2check])))
+      lvar  <- length(dataset[,col2check])  
       if(lmiss > 0){      
         tagtemp2[j] <- lmiss == lvar
         if(tagtemp2[j]){ misngvar2 <- append(misngvar2, variables[j]) }
