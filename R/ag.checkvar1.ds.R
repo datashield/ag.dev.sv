@@ -11,7 +11,7 @@
 #' @author Gaye, A.
 #' @export
 #' 
-ag.ds.checkvar1 <- function(dataset, servername, variables){
+ag.checkvar1.ds <- function(dataset, servername, variables){
   
   # lists to hold the results of the checks for all the datasets/studies
   misngvar1 <- c()

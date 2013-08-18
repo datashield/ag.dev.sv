@@ -1,8 +1,8 @@
-\name{ag.ds.checkvar1}
-\alias{ag.ds.checkvar1}
+\name{ag.checkvar1.ds}
+\alias{ag.checkvar1.ds}
 \title{Checks that variables do exist and do not contains missing data only.}
 \usage{
-  ag.ds.checkvar1(dataset, servername, variables)
+  ag.checkvar1.ds(dataset, servername, variables)
 }
 \arguments{
   \item{dataset}{a \code{dataframe} that contains the data
