@@ -2,10 +2,10 @@
 \alias{ag.histogram.ds}
 \title{Computes a histogram of the given data values without plotting.}
 \usage{
-  ag.histogram.ds(numvect)
+  ag.histogram.ds(xvect)
 }
 \arguments{
-  \item{numvect}{numeric vector for which the histogram is
+  \item{xvect}{numeric vector for which the histogram is
   desired.}
 }
 \value{

@@ -4,7 +4,7 @@
 #' a histogram. This is done without allowing for bins (cells) with a
 #' count of less than 5. If a bin has a count < 5 it is collapsed with 
 #' the nearing bin; this process iterates until all bins have count >=5.
-#' @param numvect numeric vector for which the histogram is desired.
+#' @param xvect numeric vector for which the histogram is desired.
 #' @return an object of class \code{histogram}
 #' @export
 #' @author Gaye, A.
@@ -22,10 +22,10 @@
 #' his.object <- datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
 #' }
 #' 
-ag.histogram.ds <- function (numvect) {
+ag.histogram.ds <- function (xvect) {
   
   # get the histogram object
-  histout <- hist(numvect,plot=FALSE)
+  histout <- hist(xvect,plot=FALSE)
   
   # check if any of the 'bins' contains a count < 5
   ch <- length(which(histout$count < 5))
@@ -54,7 +54,7 @@ ag.histogram.ds <- function (numvect) {
       }      
       
       # use the new vector of break points
-      histout <- hist(numvect,plot=FALSE, breaks=new.brkpts)
+      histout <- hist(xvect,plot=FALSE, breaks=new.brkpts)
       
       # check the counts in the bins
       ch <- length(which(histout$count < 5))

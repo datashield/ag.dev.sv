@@ -21,3 +21,4 @@ Collate:
     'ag.quantilemean.ds.R'
     'ag.MinMax.ds.R'
     'ag.griddensitylim.ds.R'
+    'ag.checkvar1.ds.R'
