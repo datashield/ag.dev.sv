@@ -2,13 +2,13 @@
 \alias{ag.checkvar1.ds}
 \title{Checks that variables do exist and do not contains missing data only.}
 \usage{
-  ag.checkvar1.ds(dataset, variables)
+  ag.checkvar1.ds(dataset, variable)
 }
 \arguments{
   \item{dataset}{a \code{dataframe} that contains the data
   assigned to R}
 
-  \item{variables}{the variables to check}
+  \item{variable}{the variables to check}
 }
 \value{
   '0' if the variable did not fail any of the checks and
