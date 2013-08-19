@@ -12,7 +12,8 @@
 #' 
 ag.checkvar1.ds <- function(dataset, variable){
   
-  # keep track of the datasets/studies that fail any one or more of the checks
+  # record the results of the checks, the recording variable
+  # is set to 0 initially (i.e. both tests are negative)
   toremove <- 0
   
   # get names of the variables that have been assigned to R
@@ -45,24 +46,18 @@ ag.checkvar1.ds <- function(dataset, variable){
     }
   }
 
-  # if any of the variables in the formula is missing tell and 
-  # removed the study which has missing variables
+  # if any of the variables in the formula is missing set the
+  # recording variable to 1
   if(sum(tagtemp1) > 0 ){ 
-    mm <- paste(misngvar1, collapse=",")
-    cat("The variable", mm, "is missing from \n")       
-    cat("This study will not be included in the analysis\n")
     toremove <- 1
   }
   
   # if any of the variables in the formula is empty 
-  # (i.e. contains missing values only removed the study     
+  # (i.e. contains missing values) set the the recording
+  # variable to 2     
   if(sum(tagtemp2) > 0 ){ 
-    mm <- paste(misngvar2, collapse=",")
-    cat("The variable", mm, "in is empty (NAs only)\n")       
-    cat("This study will not be included in the analysis\n")
-    toremove <- 1
+    toremove <- 2
   } 
-  cat("\n")
   
   return(toremove)
 }
