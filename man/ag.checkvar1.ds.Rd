@@ -2,14 +2,11 @@
 \alias{ag.checkvar1.ds}
 \title{Checks that variables do exist and do not contains missing data only.}
 \usage{
-  ag.checkvar1.ds(dataset, servername, variables)
+  ag.checkvar1.ds(dataset, variables)
 }
 \arguments{
   \item{dataset}{a \code{dataframe} that contains the data
   assigned to R}
-
-  \item{servername}{name of the login object the data were
-  assigned to}
 
   \item{variables}{the variables to check}
 }

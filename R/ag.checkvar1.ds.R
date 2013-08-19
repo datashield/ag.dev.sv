@@ -4,14 +4,13 @@
 #' to R from an opal datasource and if the variables are empty (contain NAs only).
 #' This function is internal (not available to users) as it is only required by \code{ds.glm}.
 #' @param dataset a \code{dataframe} that contains the data assigned to R
-#' @param servername name of the login object the data were assigned to
 #' @param variables the variables to check
 #' @return '0' if the variable did not fail any of the checks and '1' if the variable failed
 #' one or more checks.
 #' @author Gaye, A.
 #' @export
 #' 
-ag.checkvar1.ds <- function(dataset, servername, variables){
+ag.checkvar1.ds <- function(dataset, variables){
   
   # lists to hold the results of the checks for all the datasets/studies
   misngvar1 <- c()
@@ -56,9 +55,9 @@ ag.checkvar1.ds <- function(dataset, servername, variables){
   if(sum(tagtemp1) > 0 ){ 
     mm <- paste(misngvar1, collapse=",")
     if(length(misngvar1) > 1){
-      cat("The variables", mm, "are missing from ", servername,"\n")
+      cat("The variables", mm, "are missing from \n")
     }else{
-      cat("The variable", mm, "is missing from ", servername,"\n")       
+      cat("The variable", mm, "is missing from \n")       
     }
     cat("This study will not be included in the analysis\n")
     toremove <- 1
@@ -69,9 +68,9 @@ ag.checkvar1.ds <- function(dataset, servername, variables){
   if(sum(tagtemp2) > 0 ){ 
     mm <- paste(misngvar2, collapse=",")
     if(length(misngvar2) > 1){
-      cat("The variables", mm, "in", servername," are empty (NAs only)\n")
+      cat("The variables", mm, "in are empty (NAs only)\n")
     }else{
-      cat("The variable", mm, "in", servername," is empty (NAs only)\n")       
+      cat("The variable", mm, "in is empty (NAs only)\n")       
     }
     cat("This study will not be included in the analysis\n")
     toremove <- 1
