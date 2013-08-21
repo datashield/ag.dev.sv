@@ -26,7 +26,8 @@
   object, by default is 20}
 }
 \value{
-  a grid density matrix
+  a list which a grid density matrix and the number of
+  invalid cells
 }
 \description{
   Generates a density grid with a priori defined limits

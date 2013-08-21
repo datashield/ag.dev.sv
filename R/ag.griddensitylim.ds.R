@@ -7,7 +7,7 @@
 #' @param y.min a minimum value for the y axis of the grid density object
 #' @param y.max a maximum value for the y axis of the grid density object
 #' @param numints a number of intervals for the grid density object, by default is 20
-#' @return a grid density matrix
+#' @return a list which a grid density matrix and the number of invalid cells
 #' @author Isaeva, J. and Gaye, A.
 #' @export
 #' 
@@ -60,12 +60,12 @@ ag.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
   print(cell.count)
   grid.density.obj <- cbind(grid.density,x.mids,y.mids)
   
-  title.text = paste('Number of invalid cells (cells with counts >0 and <5) is ',cell.count, sep='')
-  cat(title.text,"\n")
+  #title.text = paste('Number of invalid cells (cells with counts >0 and <5) is ',cell.count, sep='')
+  #cat(title.text,"\n")
   
-  names(dimnames(grid.density.obj))[2] = title.text
-  names(dimnames(grid.density.obj))[1] = ''
+  #names(dimnames(grid.density.obj))[2] = title.text
+  #names(dimnames(grid.density.obj))[1] = ''
   
-  return(grid.density.obj)
+  return(list(grid.density.obj,cell.count))
   
 }
