@@ -1,8 +1,8 @@
-\name{ag.MinMax.ds}
-\alias{ag.MinMax.ds}
+\name{ji.MinMax.ds}
+\alias{ji.MinMax.ds}
 \title{Generates a matrix with a minimum and maximum value, for two numerical vector}
 \usage{
-  ag.MinMax.ds(xvect, yvect)
+  ji.MinMax.ds(xvect, yvect)
 }
 \arguments{
   \item{xvect}{a numerical vector}

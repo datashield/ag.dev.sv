@@ -4,7 +4,7 @@
 #' @param xvect a numerical vector
 #' @param yvect a numerical vector
 #' @return a matrix
-#' @author Isaeva, J.
+#' @author Isaeva, J. and Gaye A.
 #' @export
 #' 
 ag.MinMax.ds <- function(xvect, yvect) {

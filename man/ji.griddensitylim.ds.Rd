@@ -1,8 +1,8 @@
-\name{ag.griddensitylim.ds}
-\alias{ag.griddensitylim.ds}
+\name{ji.griddensitylim.ds}
+\alias{ji.griddensitylim.ds}
 \title{Generates a density grid with a priori defined limits}
 \usage{
-  ag.griddensitylim.ds(xvect, yvect, x.min, x.max, y.min,
+  ji.griddensitylim.ds(xvect, yvect, x.min, x.max, y.min,
     y.max, numints = 20)
 }
 \arguments{
