@@ -8,7 +8,7 @@
 #' @param y.max a maximum value for the y axis of the grid density object
 #' @param numints a number of intervals for the grid density object, by default is 20
 #' @return a grid density matrix
-#' @author Isaeva, J.
+#' @author Isaeva, J. and Gaye, A.
 #' @export
 #' 
 ag.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numints=20){
@@ -25,21 +25,9 @@ ag.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
   yvect <- yvect.save[x.and.y.present==1]
   
   
-  
-  #   #par(mfrow=c(1,1))
-  #   y.min <- min(yvect)
-  #   x.min <- min(xvect)
-  #   y.max <- max(yvect)
-  #   x.max <- max(xvect)
-  
-  
-  #   y.range <- max(yvect)-min(yvect)
-  #   x.range <- max(xvect)-min(xvect)
-  
   y.range <- y.max-y.min
   x.range <- x.max-x.min
   
-  #   numints <- 20
   y.interval <- y.range/numints
   x.interval <- x.range/numints
   
@@ -61,7 +49,7 @@ ag.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
     {
       grid.density[j,k] <- sum(1*(yvect>=y.cuts[j] & yvect<y.cuts[j+1] & xvect >=x.cuts[k] & xvect<x.cuts[k+1]), na.rm=TRUE)
       
-      if (grid.density[j,k]<=4) {
+      if ( (grid.density[j,k]>0) & (grid.density[j,k]<=4) ) {
         grid.density[j,k]  <-  0
         cell.count  <-  cell.count+1
       }
@@ -69,23 +57,15 @@ ag.griddensitylim.ds  <-  function(xvect,yvect, x.min, x.max, y.min, y.max, numi
     }
   }
   
-  
-  
-  #   print(length(x.mids))
-  #   print(length(y.mids))
-  
-  #grid.density.obj <- data.frame(matrix(grid.density),as.vector(x.mids),as.vector(y.mids))
+  print(cell.count)
   grid.density.obj <- cbind(grid.density,x.mids,y.mids)
   
-  #   if (any(grid.density.obj)<=4)
-  #     warning('Some cells contain less than four values: the table is not displayed')
-  #   else
+  title.text = paste('Number of invalid cells (cells with counts >0 and <5) is ',cell.count, sep='')
+  cat(title.text,"\n")
   
-  
-  if (cell.count>0) {
-    cat('\n Number of invalid cells is \n')
-    print(cell.count)
-  }
+  names(dimnames(grid.density.obj))[2] = title.text
+  names(dimnames(grid.density.obj))[1] = ''
   
   return(grid.density.obj)
+  
 }
