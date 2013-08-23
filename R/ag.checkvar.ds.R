@@ -10,7 +10,7 @@
 #' @author Gaye, A.
 #' @export
 #' 
-ag.checkvar1.ds <- function(dataset, variable){
+ag.checkvar.ds <- function(dataset, variable){
   
   # record the results of the checks, the recording variable
   # is set to 0 initially (i.e. both tests are negative)
