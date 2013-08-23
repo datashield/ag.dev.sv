@@ -4,7 +4,7 @@
 #' a histogram. This is done without allowing for bins (cells) with a
 #' count of less than 5. If a bin has a count < 5 it is collapsed with 
 #' the nearing bin; this process iterates until all bins have count >=5.
-#' @param xvect numeric vector for which the histogram is desired.
+#' @param xvect the numeric vector for which the histogram is desired.
 #' @return an object of class \code{histogram}
 #' @export
 #' @author Gaye, A.
@@ -19,7 +19,7 @@
 #' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 #' 
 #' # use the function to generate the histogram object
-#' his.object <- datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
+#' his.object <- datashield.aggregate(opals, quote(ag.histogram.ds("LAB_TSC")))
 #' }
 #' 
 ag.histogram.ds <- function (xvect) {
