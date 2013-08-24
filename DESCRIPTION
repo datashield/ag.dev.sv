@@ -13,10 +13,10 @@ AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     complete.cases=stats::complete.cases, cbind=base::cbind,
     data.frame=base::data.frame, as.list=base::as.list, ag.createfactor.ds
 Collate:
+    'ag.checkfactor.ds.R'
     'ag.checkvar.ds.R'
     'ag.createfactor.ds.R'
     'ag.glm.ds.R'
     'ag.histogram.ds.R'
     'ag.mean.ds.R'
     'ag.quantilemean.ds.R'
-    'ag.checkfactor.ds.R'
