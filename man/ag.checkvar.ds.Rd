@@ -19,18 +19,13 @@
   dataset assigned to R from an opal datasource and if the
   variables are empty (contain NAs only). This function is
   internal (not available to users) as it is only required
-  by \code{ds.glm}.
+  by \code{ds.glm}. THIS FUNCTION IS NOT USED ALONE, IT IS
+  CALLED BY THE FUNCTION \code{ds.checkvar} FROM THE
+  PACKAGE \code{dsbaseclient}.
 }
 \examples{
-\dontrun{
-# load the file that contains the login details
-library(ag.dev.cl)
-data(logindata)
-
-opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
-
-# check that the variable 'LAB_TSC' is available and is not empty
-var <- datashield.aggregate(opals, quote(ag.checkvar.ds(D$LAB_TSC)))
+{
+# Please see the examples in the documentation of the function 'ds.glm' from the package 'dsmodellingclient'
 }
 }
 \author{

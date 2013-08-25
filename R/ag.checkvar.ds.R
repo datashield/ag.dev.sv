@@ -3,26 +3,17 @@
 #' @description this functions checks if the variables are present in the dataset assigned 
 #' to R from an opal datasource and if the variables are empty (contain NAs only).
 #' This function is internal (not available to users) as it is only required by \code{ds.glm}.
+#' THIS FUNCTION IS NOT USED ALONE, IT IS CALLED BY THE FUNCTION \code{ds.checkvar} FROM THE PACKAGE \code{dsbaseclient}.
 #' @param dataset a \code{dataframe} that contains the data assigned to R
 #' @param variable the variables to check
 #' @return '0' if the variable did not fail any of the checks and '1' if the variable failed
 #' one or more checks.
 #' @author Gaye, A.
 #' @export
-#' @examples 
-#' \dontrun{
-#' # load the file that contains the login details
-#' library(ag.dev.cl)
-#' data(logindata)
-#' 
-#  # login and assign a numeric variable to R
-#  myvar <- list("LAB_TSC")
-#' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
-#' 
-#' # check that the variable 'LAB_TSC' is available and is not empty
-#' var <- datashield.aggregate(opals, quote(ag.checkvar.ds(D$LAB_TSC)))
+#' @examples {
+#' # Please see the examples in the documentation of the function 'ds.glm' from the package 'dsmodellingclient'
 #' }
-#' 
+#'
 ag.checkvar.ds <- function(dataset, variable){
   
   # record the results of the checks, the recording variable

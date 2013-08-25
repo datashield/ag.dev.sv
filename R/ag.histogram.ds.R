@@ -11,7 +11,7 @@
 #' @examples 
 #' \dontrun{
 #' # load the file that contains the login details
-#' library(ag.dev.cl)
+#' library(dsbaseclient)
 #' data(logindata)
 #' 
 #  # login and assign a numeric variable to R

@@ -22,7 +22,7 @@
 \examples{
 \dontrun{
 # load the file that contains the login details
-library(ag.dev.cl)
+library(dsbaseclient)
 data(logindata)
 
 opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
