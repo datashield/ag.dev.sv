@@ -21,6 +21,18 @@
   internal (not available to users) as it is only required
   by \code{ds.glm}.
 }
+\examples{
+\dontrun{
+# load the file that contains the login details
+library(ag.dev.cl)
+data(logindata)
+
+opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+
+# check that the variable 'LAB_TSC' is available and is not empty
+var <- datashield.aggregate(opals, quote(ag.checkvar.ds(D$LAB_TSC)))
+}
+}
 \author{
   Gaye, A.
 }

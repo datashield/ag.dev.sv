@@ -19,6 +19,18 @@
   This function checks if a numeric or character factor
   vector contains levels with counts > 0 and < 5.
 }
+\examples{
+\dontrun{
+# load the file that contains the login details
+library(ag.dev.cl)
+data(logindata)
+
+opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+
+# check that the factor does not contain categories with count > 0 and < 5
+output <- datashield.aggregate(opals, quote(ag.checkfactor.ds(D$LAB_TSC)))
+}
+}
 \author{
   Gaye, A.; Newby, C.
 }

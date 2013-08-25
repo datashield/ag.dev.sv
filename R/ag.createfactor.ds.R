@@ -8,7 +8,18 @@
 #' @return a 'valid' factor variable
 #' @author Gaye, A.; Burton, P.
 #' @export
+#' @examples 
+#'  \dontrun{
+#' data(logindata)
 #' 
+#' # login and assign specific variable(s)
+#' myvar <- list("GENDER")
+#' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+#' 
+#' # generate a factor vector using the variable 'GENDER'
+#' datashield.assign(opals, "gender", quote(ag.createfactor.ds(D$GENDER)))
+#'  }
+#'
 ag.createfactor.ds <- function (xvect, levels=NULL, labels=levels, exclude=NA, ordered=is.ordered(xvect)){
   
   if(is.null(levels)){
@@ -20,6 +31,8 @@ ag.createfactor.ds <- function (xvect, levels=NULL, labels=levels, exclude=NA, o
   # if it is not already a factor
   if(!(is.factor(xvect))){
     xvector <- factor(xvect, levels, labels, exclude, ordered)
+  }else{
+    xvector <- xvect
   }
   
   # call the function that checks of the vector is a valid factor

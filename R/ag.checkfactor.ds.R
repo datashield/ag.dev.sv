@@ -9,7 +9,20 @@
 #' of between 0 and 5 and 0 otherwise.
 #' @author Gaye, A.; Newby, C.
 #' @export
-#'
+#' @examples 
+#' \dontrun{
+#' # load the file that contains the login details
+#' library(ag.dev.cl)
+#' data(logindata)
+#' 
+#  # login and assign a numeric variable to R
+#  myvar <- list("LAB_TSC")
+#' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+#' 
+#' # check that the factor does not contain categories with count > 0 and < 5
+#' output <- datashield.aggregate(opals, quote(ag.checkfactor.ds(D$LAB_TSC)))
+#' }
+#' 
 ag.checkfactor.ds  <-  function(xvect){
   
   # check if the input vector is of factor type

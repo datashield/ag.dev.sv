@@ -2,10 +2,10 @@
 \alias{ag.mean.ds}
 \title{Calculates a statistical mean}
 \usage{
-  ag.mean.ds(a)
+  ag.mean.ds(xvect)
 }
 \arguments{
-  \item{a}{a numerical vector}
+  \item{xvect}{a numerical vector}
 }
 \value{
   a numeric
@@ -13,6 +13,18 @@
 \description{
   Computes the mean statistic for vectors with more than 4
   entries
+}
+\examples{
+\dontrun{
+# load the file that contains the login details
+library(ag.dev.cl)
+data(logindata)
+
+opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+
+# compute the statistical mean
+stat.mean <- datashield.aggregate(opals, quote(ag.mean.ds(D$LAB_TSC)))
+}
 }
 \author{
   Gaye, A.

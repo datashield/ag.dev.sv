@@ -23,6 +23,18 @@
 \description{
   Generates a factor variable
 }
+\examples{
+\dontrun{
+data(logindata)
+
+# login and assign specific variable(s)
+myvar <- list("GENDER")
+opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+
+# generate a factor vector using the variable 'GENDER'
+datashield.assign(opals, "gender", quote(ag.createfactor.ds(D$GENDER)))
+ }
+}
 \author{
   Gaye, A.; Burton, P.
 }
