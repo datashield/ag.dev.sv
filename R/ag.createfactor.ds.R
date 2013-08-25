@@ -1,11 +1,14 @@
 #' 
-#' @title Generates a factor variable 
+#' @title Generates a factor variable
+#' @description The functions uses the input vector to generate a factor vector.
+#' The generate factor is checked and if valid (no category with count > 0 and < 5)
+#' returned; if not valid an empty of the same length is returned. 
 #' @param xvect a numerical or character vector
 #' @param levels optional vector of values that 'xvect' might have taken
 #' @param labels labels for the different levels
 #' @param exclude values to be excluded
 #' @param ordered tells if the variable 'x' is ordered
-#' @return a 'valid' factor variable
+#' @return a 'valid' factor vector or an empty vector of the same length.
 #' @author Gaye, A.; Burton, P.
 #' @export
 #' @examples 
@@ -46,7 +49,8 @@ ag.createfactor.ds <- function (xvect, levels=NULL, labels=levels, exclude=NA, o
   if(status == 0){
     return(xvector) 
   }else{
-    return("This is not a valid factor; some categories have  a  count > 0 and < 5!")
+    xvector <- rep(NA, length(xvector))
+    return(xvector)
   }
   
 }

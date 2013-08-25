@@ -18,10 +18,14 @@
   \item{ordered}{tells if the variable 'x' is ordered}
 }
 \value{
-  a 'valid' factor variable
+  a 'valid' factor vector or an empty vector of the same
+  length.
 }
 \description{
-  Generates a factor variable
+  The functions uses the input vector to generate a factor
+  vector. The generate factor is checked and if valid (no
+  category with count > 0 and < 5) returned; if not valid
+  an empty of the same length is returned.
 }
 \examples{
 \dontrun{

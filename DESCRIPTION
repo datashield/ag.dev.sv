@@ -20,3 +20,4 @@ Collate:
     'ag.histogram.ds.R'
     'ag.mean.ds.R'
     'ag.quantilemean.ds.R'
+    'ag.isNA.ds.R'

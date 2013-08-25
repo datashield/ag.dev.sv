@@ -38,13 +38,12 @@ ag.checkvar.ds <- function(dataset, variable){
   if(tagtemp1){ 
       misngvar1 <- append(misngvar1, variable) 
   }else{
-    # check how if variable contains only missings, if yes record
+    # check if variable contains only missings, if yes record
     col2check <- which(var.names == variable)
-    lmiss <- length(which(is.na(dataset[,col2check])))
-    lvar  <- length(dataset[,col2check])  
-    if(lmiss > 0){      
-      tagtemp2 <- lmiss == lvar
-      if(tagtemp2){ misngvar2 <- append(misngvar2, variable) }
+    lmiss <- ag.isNA.ds (dataset[,col2check])
+    if(lmiss){      
+      tagtemp2 <- 1
+      misngvar2 <- append(misngvar2, variable)
     }else{
       tagtemp2 <- 0
     }
