@@ -7,7 +7,7 @@ Title: ag.dev.sv
 Description: ag.dev.sv (server)
 AggregateMethods: length=base::length, colnames=base::colnames, ag.checkvar.ds,
     ag.glm.ds, ag.histogram.ds, dim=base::dim, ag.quantilemean.ds, ag.mean.ds,
-    ag.checkfactor.ds
+    ag.checkfactor.ds, ag.isNA.ds
 AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     as.numeric=base::as.numeric, as.matrix=base::as.matrix,
     complete.cases=stats::complete.cases, cbind=base::cbind,

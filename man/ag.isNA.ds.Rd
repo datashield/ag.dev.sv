@@ -12,9 +12,9 @@
   otherwise
 }
 \description{
-  this function to R function \code{is.na} but instead of a
-  vector of booleans it returns just one boolean to tell if
-  all the element are missing values.
+  this function is similar to R function \code{is.na} but
+  instead of a vector of booleans it returns just one
+  boolean to tell if all the element are missing values.
 }
 \examples{
 \dontrun{
