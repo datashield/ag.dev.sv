@@ -23,6 +23,9 @@
 #' 
 #' # generate a factor vector using the variable 'GENDER'
 #' datashield.assign(opals, "sex", quote(ag.createfactor.ds(D$GENDER)))
+#' 
+#' # display the number of observation in each vector
+#' datashield.aggregate(opals, quote(length(sex)))
 #'  }
 #'
 ag.createfactor.ds <- function (xvect, levels=NULL, labels=levels, exclude=NA, ordered=is.ordered(xvect)){
