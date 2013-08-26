@@ -7,11 +7,11 @@ Title: ag.dev.sv
 Description: ag.dev.sv (server)
 AggregateMethods: length=base::length, colnames=base::colnames, ag.checkvar.ds,
     ag.glm.ds, ag.histogram.ds, dim=base::dim, ag.quantilemean.ds, ag.mean.ds,
-    ag.checkfactor.ds, ag.isNA.ds, ag.danger.print
+    ag.checkfactor.ds, ag.isNA.ds, ag.createfactor.ds
 AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     as.numeric=base::as.numeric, as.matrix=base::as.matrix,
     complete.cases=stats::complete.cases, cbind=base::cbind,
-    data.frame=base::data.frame, as.list=base::as.list, ag.createfactor.ds
+    data.frame=base::data.frame, as.list=base::as.list,
 Collate:
     'ag.checkfactor.ds.R'
     'ag.checkvar.ds.R'
@@ -21,4 +21,3 @@ Collate:
     'ag.mean.ds.R'
     'ag.quantilemean.ds.R'
     'ag.isNA.ds.R'
-    'ag.danger.print.R'
