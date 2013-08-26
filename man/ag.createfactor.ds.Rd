@@ -38,7 +38,7 @@ myvar <- list("GENDER")
 opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 
 # generate a factor vector using the variable 'GENDER'
-datashield.assign(opals, "gender", quote(ag.createfactor.ds(D$GENDER)))
+datashield.assign(opals, "sex", quote(ag.createfactor.ds(D$GENDER)))
  }
 }
 \author{

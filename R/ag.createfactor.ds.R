@@ -22,7 +22,7 @@
 #' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 #' 
 #' # generate a factor vector using the variable 'GENDER'
-#' datashield.assign(opals, "gender", quote(ag.createfactor.ds(D$GENDER)))
+#' datashield.assign(opals, "sex", quote(ag.createfactor.ds(D$GENDER)))
 #'  }
 #'
 ag.createfactor.ds <- function (xvect, levels=NULL, labels=levels, exclude=NA, ordered=is.ordered(xvect)){
@@ -47,10 +47,10 @@ ag.createfactor.ds <- function (xvect, levels=NULL, labels=levels, exclude=NA, o
   # if the factor is valid (i.e. no categories with between 0 and 5 counts)
   # return the created factor otherwise print a failure message
   if(status == 0){
-    return(xvector) 
+    fvect <- xvector 
   }else{
-    xvector <- rep(NA, length(xvector))
-    return(xvector)
+    fvect <- rep(NA, length(xvector))
   }
-  
+  cat(length(fvect),"\n")
+  return(fvect)
 }
