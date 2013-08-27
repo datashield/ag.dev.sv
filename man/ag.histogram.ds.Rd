@@ -2,13 +2,17 @@
 \alias{ag.histogram.ds}
 \title{Computes a histogram of the given data values without plotting.}
 \usage{
-  ag.histogram.ds(xvect, range)
+  ag.histogram.ds(xvect, min, max)
 }
 \arguments{
   \item{xvect}{the numeric vector for which the histogram
   is desired.}
 
-  \item{range}{a numeric vector, a minimum and a maximum.}
+  \item{min}{a numerical used as the lower lim of the
+  histogram breaks}
+
+  \item{max}{a numerical used as the upper lim of the
+  histogram breaks}
 }
 \value{
   a list with an object of class \code{histogram} and a
