@@ -1,6 +1,6 @@
 \name{ag.quantilemean.ds}
 \alias{ag.quantilemean.ds}
-\title{Provides quantiles and mean information without maximum and minimum}
+\title{Generates quantiles and mean information without maximum and minimum}
 \usage{
   ag.quantilemean.ds(xvect)
 }
@@ -11,8 +11,8 @@
   a numeric vector that represents the sample quantiles
 }
 \description{
-  Provides quantiles and mean information without maximum
-  and minimum
+  the probabilities 5%, 10%, 25%, 50%, 75%, 90%, 95% and
+  the mean are used to compute the corresponding quantiles
 }
 \examples{
 \dontrun{

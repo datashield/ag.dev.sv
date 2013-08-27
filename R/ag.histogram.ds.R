@@ -32,16 +32,15 @@ ag.histogram.ds <- function (xvect, range) {
   histout <- hist(xvect, breaks=brks, plot=FALSE)
   
   # check if any of the 'bins' contains a count < 5
-  ch <- length(which(histout$count < 5))
+  indx <- which(histout$counts > 0 & histout$counts < 5)
+  l.small.counts <- length(indx)
   
-  if(ch > 0){
-    # get indices of bins with count < 5 
-    indx <- which(histout$count < 5)
-    
+  if(l.small.counts > 0){
+
     # replace the corresponding, counts, densities and intensities by zeros
-    hist$count[indx] <- 0
-    hist$density[indx] <- 0   
-    hist$intensities[indx] <- 0   
+    histout$counts[indx] <- 0
+    histout$density[indx] <- 0   
+    histout$intensities[indx] <- 0   
     
     # get the midpoints corresponding to the above indices
     # these midpoint will be used to put '*' in the final plot

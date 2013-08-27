@@ -1,6 +1,8 @@
 #' 
-#' @title Provides quantiles and mean information without maximum and minimum
+#' @title Generates quantiles and mean information without maximum and minimum
 #' @param xvect a numerical vector
+#' @description the probabilities 5%, 10%, 25%, 50%, 75%, 90%, 95% and the mean
+#' are used to compute the corresponding quantiles 
 #' @return a numeric vector that represents the sample quantiles 
 #' @export
 #' @author Burton, P.; Gaye, A.
@@ -23,7 +25,7 @@ ag.quantilemean.ds<- function (xvect) {
   mm <- mean(xvect,na.rm=TRUE)
   quantile.obj <- c(qq, mm)
   
-  names(quantile.obj) <- c("5%","10","25%","50%","75%","90%","95%","Mean")
+  names(quantile.obj) <- c("5%","10%","25%","50%","75%","90%","95%","Mean")
   
   return(quantile.obj)
 }
