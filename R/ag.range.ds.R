@@ -26,7 +26,7 @@ ag.range.ds <- function(xvect){
   if(!(is.numeric(xvect))){
     stop("The input vector is not a numeric!")
   }else{
-    rr <- range(xvect)
+    rr <- range(xvect, na.rm=TRUE)
     output <- rr * runif(2, 1, 1.05)
   }
   return (output)
