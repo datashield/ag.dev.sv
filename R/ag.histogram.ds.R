@@ -5,7 +5,8 @@
 #' count of less than 5. If a bin has a count < 5 it is collapsed with 
 #' the nearing bin; this process iterates until all bins have count >=5.
 #' @param xvect the numeric vector for which the histogram is desired.
-#' @return an object of class \code{histogram}
+#' @param range a numeric vector, a minimum and a maximum.
+#' @return a list with an object of class \code{histogram} and a vector of x-positions
 #' @export
 #' @author Gaye, A.
 #' @examples 
@@ -22,44 +23,34 @@
 #' hist.object <- datashield.aggregate(opals, quote(ag.histogram.ds(D$LAB_TSC)))
 #' }
 #' 
-ag.histogram.ds <- function (xvect) {
+ag.histogram.ds <- function (xvect, range) {
+  
+  # generate breaks points using the provided range
+  brks <- seq(range[1], range[2], 0.3)
   
   # get the histogram object
-  histout <- hist(xvect,plot=FALSE)
+  histout <- hist(xvect, breaks=brks, plot=FALSE)
   
   # check if any of the 'bins' contains a count < 5
   ch <- length(which(histout$count < 5))
   
-  # if any 'bin' contains a count < 5 use larger bins (i.e. less bins)
-  # this process continues until all counts > 5
   if(ch > 0){
-    while(ch > 0){
-      # get the vector of break points and its length
-      brkpts <- histout$breaks
-      l.brkpts <- length(brkpts)
-      
-      # indices of the bins with counts < 5
-      indx <- which(histout$count < 5)
-      
-      # combine the break points where count < 5 with the nearest break point
-      # if the small count is on the left tail of the histogram the nearest is 
-      # on the right and on the left if the small count is on the right tail
-      # by 'combine' I mean just removing the nearest break hence merging two bins.
-      midpoint <- l.brkpts/2
-      if(indx[1] < midpoint){
-        new.brkpts <- brkpts[-(indx[1]+1)]
-      }
-      if(indx[1] > midpoint){
-        new.brkpts <- brkpts[-(indx[1])]
-      }      
-      
-      # use the new vector of break points
-      histout <- hist(xvect,plot=FALSE, breaks=new.brkpts)
-      
-      # check the counts in the bins
-      ch <- length(which(histout$count < 5))
-    }
+    # get indices of bins with count < 5 
+    indx <- which(histout$count < 5)
+    
+    # replace the corresponding, counts, densities and intensities by zeros
+    hist$count[indx] <- 0
+    hist$density[indx] <- 0   
+    hist$intensities[indx] <- 0   
+    
+    # get the midpoints corresponding to the above indices
+    # these midpoint will be used to put '*' in the final plot
+    axterixpos <- histout$mids[indx]
+  }else{
+    axterixpos <- NULL
   }
-
-  return(histout)
+  
+  # return a list with the histogram object and the vector 'axterispos'
+  return(list("histobject"=histout, "aterix2plot"=axterixpos))
+  
 }
