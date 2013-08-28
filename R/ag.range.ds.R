@@ -16,7 +16,7 @@
 #' myvar <- list("LAB_HDL")
 #' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 #' 
-#' # check if the variable 'LAB_HDL' is empty
+#' # get the range of the variable 'LAB_HDL'
 #' datashield.aggregate(opals, quote(range.ds(D$LAB_HDL)))
 #' }
 #'
