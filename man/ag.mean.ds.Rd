@@ -1,6 +1,6 @@
 \name{ag.mean.ds}
 \alias{ag.mean.ds}
-\title{Calculates a statistical mean}
+\title{Calculates a statistical mean for a vector with more than 4 entries}
 \usage{
   ag.mean.ds(xvect)
 }
@@ -11,8 +11,8 @@
   a numeric
 }
 \description{
-  Computes the mean statistic for vectors with more than 4
-  entries
+  Calculates a statistical mean for a vector with more than
+  4 entries
 }
 \examples{
 \dontrun{

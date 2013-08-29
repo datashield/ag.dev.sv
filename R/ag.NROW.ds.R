@@ -1,5 +1,6 @@
 #'
-#' @title Calculates a statistical mean for a vector with more than 4 entries
+#' @title Returns the number of rows or columns present in a 1-column matrix vector
+#' @details The number of rows is returned only if the vector contain more than 4 entries.
 #' @param xvect a numerical vector
 #' @return a numeric 
 #' @author Gaye, A.
@@ -14,14 +15,14 @@
 #  myvar <- list("LAB_TSC")
 #' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
 #' 
-#' # compute the statistical mean
-#' stat.mean <- datashield.aggregate(opals, quote(ag.mean.ds(D$LAB_TSC)))
+#' # run the function
+#' stat.mean <- datashield.aggregate(opals, quote(NROW(D$LAB_TSC)))
 #' }
 #' 
 
-ag.mean.ds <- function (xvect) {
+ag.NROW.ds <- function (xvect) {
   if(length(xvect) > 0 & length(xvect) < 5){
-    mean(xvect,na.rm=TRUE)
+    NROW(xvect)
   }else{
     cat("Operation not allowed!\n")
   }
