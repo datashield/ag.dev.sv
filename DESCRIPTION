@@ -8,7 +8,7 @@ Description: ag.dev.sv (server)
 AggregateMethods: length=base::length, colnames=base::colnames, ag.glm.ds,
     ag.histogram.ds, dim=base::dim, ag.quantilemean.ds, ag.mean.ds,
     ag.checkfactor.ds, ag.isNA.ds, ag.range.ds, c=base::c, t.test=stats::t.test,
-    var=stats::var, is.null
+    var=stats::var, is.null=base::is.null
 AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     as.numeric=base::as.numeric, as.matrix=base::as.matrix,
     complete.cases=stats::complete.cases, cbind=base::cbind,
