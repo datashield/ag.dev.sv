@@ -1,15 +1,15 @@
 \name{ag.t.test.ds}
 \alias{ag.t.test.ds}
-\title{Performs one and two sample t-tests}
+\title{Produces the input required by the function 'ds.t.test'}
 \usage{
-  ag.t.test.ds(xvect, yvect = NULL, alternative = 1,
+  ag.t.test.ds(x, y = NULL, alternative = "two.sided",
     mu = 0, paired = FALSE, var.equal = FALSE,
     conf.level = 0.95)
 }
 \arguments{
-  \item{xvect}{a numeric vector of data values}
+  \item{x}{a numeric vector of data values}
 
-  \item{yvect}{a numeric vector of data values}
+  \item{y}{a numeric vector of data values}
 
   \item{alternative}{an integer specifying the alternative
   hypothesis, 1 for "two.sided" (default), 2 for "greater"
@@ -31,12 +31,11 @@
   \item{conf.level}{confidence level of the interval.}
 }
 \value{
-  a list of class \code{htest}, see the R function
-  \code{t.test} in package \code{stats} for details of the
-  elements in the returmed object.
+  a list that contains the length, mean and variance of the
+  variable x
 }
 \description{
-  Performs one and two sample t-tests
+  Produces the input required by the function 'ds.t.test'
 }
 \examples{
 \dontrun{
@@ -52,6 +51,6 @@ datashield.aggregate(opals, quote(t.test.ds(D$LAB_TSC, D$LAB_HDL)))
 }
 }
 \author{
-  Burton P.; Gaye, A.
+  Gaye, A., Isaeva, J.
 }
 
