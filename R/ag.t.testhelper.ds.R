@@ -1,5 +1,6 @@
 #' 
 #' @title Produces the input required by the function 'ds.t.test'
+#' @description This function is not used alone it is called by 'ds.t.test'
 #' @param x a numeric vector of data values
 #' @param y a numeric vector of data values
 #' @param alternative an integer specifying the alternative hypothesis,
@@ -15,20 +16,8 @@
 #' @return a list that contains the length, mean and variance of the variable x
 #' @author Gaye, A., Isaeva, J.
 #' @export
-#' @examples 
-#' \dontrun{
-#' library(dsbaseclient)
-#' data(logindata)
-#' 
-#' # login and assign specific variable(s)
-#' myvar <- list("LAB_TSC", "LAB_HDL")
-#' opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
-#' 
-#' # run a t.test
-#' datashield.aggregate(opals, quote(t.test.ds(D$LAB_TSC, D$LAB_HDL)))
-#' }
 #'
-ag.t.test.ds <- function (x, y = NULL, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = FALSE, conf.level = 0.95){  
+ag.t.testhelper.ds <- function (x, y = NULL, alternative = "two.sided", mu = 0, paired = FALSE, var.equal = FALSE, conf.level = 0.95){  
   
   if (!missing(mu) && (length(mu) != 1 || is.na(mu))){
     stop("'mu' must be a single number")

@@ -1,10 +1,10 @@
-\name{ag.t.test.ds}
-\alias{ag.t.test.ds}
+\name{ag.t.testhelper.ds}
+\alias{ag.t.testhelper.ds}
 \title{Produces the input required by the function 'ds.t.test'}
 \usage{
-  ag.t.test.ds(x, y = NULL, alternative = "two.sided",
-    mu = 0, paired = FALSE, var.equal = FALSE,
-    conf.level = 0.95)
+  ag.t.testhelper.ds(x, y = NULL,
+    alternative = "two.sided", mu = 0, paired = FALSE,
+    var.equal = FALSE, conf.level = 0.95)
 }
 \arguments{
   \item{x}{a numeric vector of data values}
@@ -35,20 +35,8 @@
   variable x
 }
 \description{
-  Produces the input required by the function 'ds.t.test'
-}
-\examples{
-\dontrun{
-library(dsbaseclient)
-data(logindata)
-
-# login and assign specific variable(s)
-myvar <- list("LAB_TSC", "LAB_HDL")
-opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
-
-# run a t.test
-datashield.aggregate(opals, quote(t.test.ds(D$LAB_TSC, D$LAB_HDL)))
-}
+  This function is not used alone it is called by
+  'ds.t.test'
 }
 \author{
   Gaye, A., Isaeva, J.
