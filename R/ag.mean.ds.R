@@ -21,8 +21,8 @@
 
 ag.mean.ds <- function (xvect) {
   if(length(xvect) > 0 & length(xvect) < 5){
-    mean(xvect,na.rm=TRUE)
-  }else{
     stop("Operation not allowed!\n")
+  }else{
+    mean(xvect,na.rm=TRUE) 
   }
 }
