@@ -14,7 +14,7 @@ AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
     complete.cases=stats::complete.cases, cbind=base::cbind,
     data.frame=base::data.frame, as.list=base::as.list, ag.createfactor.ds,
     complete.cases=stats::complete.cases, subset=base::subset, ag.product.ds,
-    sum=base::sum, as.null=base::as.null, ag.NROW.ds
+    sum=base::sum, as.null=base::as.null, NROW=base::NROW
 Collate:
     'ag.checkfactor.ds.R'
     'ag.createfactor.ds.R'
@@ -25,4 +25,3 @@ Collate:
     'ag.isNA.ds.R'
     'ag.range.ds.R'
     'ag.product.ds.R'
-    'ag.NROW.ds.R'
