@@ -51,5 +51,3 @@ Collate:
     'ag.product.ds.R'
     'ag.quantilemean.ds.R'
     'ag.range.ds.R'
-    'ag.table1d.ds.R'
-    'ag.table2d.ds.R'
