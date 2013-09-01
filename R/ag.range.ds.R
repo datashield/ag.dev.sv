@@ -26,8 +26,8 @@ ag.range.ds <- function(xvect){
     stop("The input vector is not a numeric!")
   }else{
     rr <- c(min(xvect, na.rm=TRUE), max(xvect, na.rm=TRUE))
-    random1 <- runif(1, 0.9, 1)
-    random2 <- runif(1, 1, 1.1)
+    random1 <- runif(1, 0.875, 1)
+    random2 <- runif(1, 1, 1.125)
     output <- c(rr[1]*random1, rr[2]*random2)
   }
   return (output)
