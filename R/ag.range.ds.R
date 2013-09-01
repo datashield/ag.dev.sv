@@ -7,9 +7,8 @@
 #' @author Gaye, A.
 #' @export
 #' @examples 
-#'  \dontrun{
+#' \dontrun{
 #' # load the login data
-#' library(dsbaseclient)
 #' data(logindata)
 #' 
 #' # login and assign specific variable(s)

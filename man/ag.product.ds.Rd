@@ -21,6 +21,19 @@
 \description{
   Computes a product
 }
+\examples{
+\dontrun{
+# load the file that contains the login details
+data(logindata)
+
+# login and assign the required variables to R
+myvar <- list("LAB_TSC","LAB_HDL")
+opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)
+
+# compute the of 'LAB_TSC' by 'LAB_HDL' and assign it to 'P'
+datashield.assign(opals, "P", quote(ag.product.ds(D$LAB_TSC, D$LAB_HDL)))
+}
+}
 \author{
   Burton, P.
 }

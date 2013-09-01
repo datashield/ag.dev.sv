@@ -5,23 +5,51 @@ Version: 1.0
 License: GPL-3
 Title: ag.dev.sv
 Description: ag.dev.sv (server)
-AggregateMethods: length=base::length, colnames=base::colnames, ag.glm.ds,
-    ag.histogram.ds, dim=base::dim, ag.quantilemean.ds, ag.mean.ds,
-    ag.checkfactor.ds, ag.isNA.ds, ag.range.ds, c=base::c, t.test=stats::t.test,
-    var=stats::var, is.null=base::is.null, NROW=base::NROW
-AssignMethods: log=base::log, exp=base::exp, as.list=base::as.list,
-    as.numeric=base::as.numeric, as.matrix=base::as.matrix,
-    complete.cases=stats::complete.cases, cbind=base::cbind,
-    data.frame=base::data.frame, as.list=base::as.list, ag.createfactor.ds,
-    complete.cases=stats::complete.cases, subset=base::subset, ag.product.ds,
-    sum=base::sum, as.null=base::as.null
+AggregateMethods: length=base::length,
+    colnames=base::colnames,
+    ag.glm.ds,
+    ag.histogram.ds,
+    dim=base::dim,
+    ag.quantilemean.ds,
+    ag.mean.ds,
+    ag.checkfactor.ds,
+    ag.isNA.ds,
+    ag.range.ds,
+    c=base::c,
+    cbind=base::cbind,
+    t.test=stats::t.test,
+    var=stats::var,
+    is.null=base::is.null,
+    NROW=base::NROW
+    ag.table.1d,
+    ag.table.2d,
+    ag.table1d.ds,
+    ag.table2d.ds,
+    ag.MinMax.ds,
+    ag.densitygrid.ds,
+AssignMethods: log=base::log,
+    exp=base::exp,
+    as.list=base::as.list,
+    as.numeric=base::as.numeric,
+    as.matrix=base::as.matrix,
+    complete.cases=stats::complete.cases,
+    data.frame=base::data.frame,
+    ag.createfactor.ds,
+    subset=base::subset,
+    ag.product.ds,
+    sum=base::sum,
+    as.null=base::as.null
 Collate:
     'ag.checkfactor.ds.R'
     'ag.createfactor.ds.R'
+    'ag.densitygrid.ds.R'
     'ag.glm.ds.R'
     'ag.histogram.ds.R'
-    'ag.mean.ds.R'
-    'ag.quantilemean.ds.R'
     'ag.isNA.ds.R'
-    'ag.range.ds.R'
+    'ag.mean.ds.R'
+    'ag.MinMax.ds.R'
     'ag.product.ds.R'
+    'ag.quantilemean.ds.R'
+    'ag.range.ds.R'
+    'ag.table1d.ds.R'
+    'ag.table2d.ds.R'

@@ -8,7 +8,7 @@
   \item{xvect}{a numerical vector}
 }
 \value{
-  a numeric
+  a numerical
 }
 \description{
   Calculates a statistical mean for a vector with more than
@@ -17,7 +17,6 @@
 \examples{
 \dontrun{
 # load the file that contains the login details
-library(dsbaseclient)
 data(logindata)
 
 opals <- ag.ds.login(logins=logindata,assign=TRUE,variables=myvar)

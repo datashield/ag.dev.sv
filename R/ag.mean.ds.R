@@ -1,13 +1,12 @@
 #'
 #' @title Calculates a statistical mean for a vector with more than 4 entries
 #' @param xvect a numerical vector
-#' @return a numeric 
+#' @return a numerical
 #' @author Gaye, A.
 #' @export
 #' @examples 
 #' \dontrun{
 #' # load the file that contains the login details
-#' library(dsbaseclient)
 #' data(logindata)
 #' 
 #  # login and assign a numeric variable to R
